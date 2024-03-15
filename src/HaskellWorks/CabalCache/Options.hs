@@ -12,5 +12,4 @@ import qualified Options.Applicative  as OA
 
 readOrFromTextOption :: (Read a, FromText a) => Mod OptionFields a -> Parser a
 readOrFromTextOption =
-  let fromStr s = readEither s <|> fromText (T.pack s)
-  in OA.option $ OA.eitherReader fromStr
+  OA.option $ OA.eitherReader readEither <|> OA.eitherReader (fromText . T.pack)
