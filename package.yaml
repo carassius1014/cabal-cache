@@ -1,0 +1,74 @@
+name: cabal-cache
+
+language: GHC2021
+
+default-extensions:
+  - BlockArguments
+  - DataKinds
+  - LambdaCase
+  - MonoLocalBinds
+
+library:
+  source-dirs:
+    - src
+  dependencies:
+    - aeson
+    - amazonka
+    - amazonka-core
+    - amazonka-s3
+    - attoparsec
+    - base
+    - bytestring
+    - conduit-extra
+    - containers
+    - crypton
+    - deepseq
+    - directory
+    - exceptions
+    - filepath
+    - generic-lens
+    - http-client
+    - http-client-tls
+    - http-types
+    - lens
+    - mtl
+    - network-uri
+    - oops
+    - optparse-applicative
+    - process
+    - relation
+    - resourcet
+    - stm
+    - text
+    - topograph
+    - transformers
+
+executables:
+  cabal-cache:
+    source-dirs:
+      - app
+    main: Main.hs
+    dependencies:
+      - aeson
+      - amazonka
+      - base
+      - bytestring
+      - cabal-cache
+      - cabal-install-parsers
+      - containers
+      - directory
+      - exceptions
+      - filepath
+      - generic-lens
+      - lens
+      - mtl
+      - network-uri
+      - oops
+      - optparse-applicative
+      - resourcet
+      - stm
+      - stringsearch
+      - temporary
+      - text
+      - transformers
+      - unliftio

@@ -1,0 +1,12 @@
+resolver: lts-22.21
+
+packages:
+  - .
+
+extra-deps:
+  - cabal-install-parsers-0.6.1.1
+  - relation-0.5.2.0
+
+allow-newer: true
+
+notify-if-nix-on-path: false
